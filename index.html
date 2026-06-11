@@ -6,28 +6,27 @@
 <title>The Time Rich Project — Take back your time</title>
 <meta name="description" content="The Time Rich Project helps Gen X take back their time and build the life they actually want. A podcast, a newsletter, and a community. Formerly The Corporate Escapee.">
 
-<!-- Open Graph -->
 <meta property="og:title" content="The Time Rich Project">
 <meta property="og:description" content="Take back your time and build the life you actually want. For Gen X who are done trading their best hours for diminishing returns.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --paper:#F2ECDF;
-    --paper-2:#FBF6EC;
-    --ink:#25221C;
+    --cream:#FAF2E4;
+    --cream-2:#FDF8EF;
+    --green:#1D4836;
+    --pine:#143527;
+    --orange:#D6672A;
+    --orange-d:#B85420;
+    --navy:#001244;
+    --ink:#1F2A24;
     --muted:#6E6456;
-    --green:#1E4D3A;
-    --green-deep:#143527;
-    --green-line:rgba(30,77,58,.16);
-    --clay:#C0673D;
-    --clay-soft:rgba(192,103,61,.12);
-    --line:#E0D5C1;
-    --display:'Fraunces',Georgia,'Times New Roman',serif;
+    --line:#E4D6C1;
+    --display:'Yeseva One',Georgia,serif;
     --body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     --wrap:1120px;
     --r:14px;
@@ -35,181 +34,111 @@
 
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--body);
-    font-size:18px;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
+  body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+  .arrow{color:var(--orange);font-weight:700;display:inline-block}
 
-  /* arrow connective device */
-  .arrow{color:var(--clay);font-weight:600;display:inline-block}
-
-  /* ---------- Header ---------- */
-  .site-head{
-    position:sticky;top:0;z-index:50;
-    background:rgba(242,236,223,.82);
-    backdrop-filter:saturate(140%) blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .head-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:24px}
-  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;color:var(--green-deep)}
-  .brand .mark{flex:0 0 auto}
-  .brand small{display:block;font-family:var(--body);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:1px}
+  /* header */
+  .site-head{position:sticky;top:0;z-index:50;background:rgba(250,242,228,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+  .head-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+  .brand{font-family:var(--display);font-size:23px;color:var(--green);line-height:1}
+  .brand small{display:block;font-family:var(--body);font-weight:500;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:4px}
   .nav{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:500}
-  .nav a{color:var(--muted);transition:color .18s}
-  .nav a:hover{color:var(--green)}
-  .nav .pill{
-    color:#fff;background:var(--green);padding:9px 17px;border-radius:999px;
-    transition:background .18s,transform .18s;
-  }
-  .nav .pill:hover{background:var(--green-deep);transform:translateY(-1px)}
-  .nav-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--green-deep);font-size:15px;font-weight:600}
+  .nav a{color:var(--green);transition:color .18s}
+  .nav a:hover{color:var(--orange)}
+  .nav .pill{color:#fff;background:var(--orange);padding:9px 17px;border-radius:999px;transition:background .18s,transform .18s}
+  .nav .pill:hover{background:var(--orange-d);transform:translateY(-1px);color:#fff}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--green);font-size:15px;font-weight:600}
 
-  /* ---------- Hero ---------- */
+  /* hero */
   .hero{padding:84px 0 72px}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
-  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:22px}
-  .hero h1{
-    font-family:var(--display);
-    font-weight:600;
-    font-size:clamp(40px,6vw,68px);
-    line-height:1.02;
-    letter-spacing:-.02em;
-    color:var(--green-deep);
-  }
-  .hero h1 em{font-style:italic;color:var(--clay)}
-  .hero .sub{margin-top:24px;font-size:19px;color:var(--ink);max-width:30em}
-  .northstar{margin-top:26px;font-family:var(--display);font-size:21px;font-weight:500;color:var(--green);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-  .northstar .arrow{font-family:var(--body)}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:22px}
+  .hero h1{font-family:var(--display);font-size:clamp(40px,6vw,66px);line-height:1.06;color:var(--pine)}
+  .hero h1 em{font-style:normal;color:var(--orange)}
+  .hero .sub{margin-top:26px;font-size:19px;color:var(--ink);max-width:30em}
+  .northstar{margin-top:26px;font-family:var(--display);font-size:21px;color:var(--green);display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 
-  .signup{display:flex;gap:10px;margin-top:30px;max-width:440px;flex-wrap:wrap}
-  .signup input{
-    flex:1 1 220px;min-width:0;
-    padding:14px 16px;border:1.5px solid var(--line);border-radius:11px;
-    background:var(--paper-2);font-family:var(--body);font-size:16px;color:var(--ink);
-    transition:border-color .18s,box-shadow .18s;
-  }
-  .signup input::placeholder{color:#A99E8B}
-  .signup input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-line)}
-  .btn{
-    padding:14px 22px;border:0;border-radius:11px;cursor:pointer;
-    background:var(--green);color:#fff;font-family:var(--body);font-weight:600;font-size:16px;
-    transition:background .18s,transform .18s;white-space:nowrap;
-  }
-  .btn:hover{background:var(--green-deep);transform:translateY(-1px)}
-  .hero .micro{margin-top:12px;font-size:14px;color:var(--muted)}
-  .hero .micro a{color:var(--green);font-weight:600;border-bottom:1.5px solid var(--clay-soft)}
-  .hero .micro a:hover{border-color:var(--clay)}
-  .signup-done{margin-top:30px;font-family:var(--display);font-size:20px;color:var(--green);font-weight:500}
+  .cta-row{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border:0;border-radius:11px;cursor:pointer;background:var(--orange);color:#fff;font-family:var(--body);font-weight:600;font-size:16px;transition:background .18s,transform .18s;white-space:nowrap;display:inline-block}
+  .btn:hover{background:var(--orange-d);transform:translateY(-1px);color:#fff}
+  .btn-ghost{padding:14px 22px;border:1.5px solid var(--green);border-radius:11px;color:var(--green);font-weight:600;font-size:16px;transition:background .18s,color .18s;display:inline-block}
+  .btn-ghost:hover{background:var(--green);color:var(--cream)}
+  .hero .micro{margin-top:14px;font-size:14px;color:var(--muted)}
 
-  /* signature: the ledger card */
-  .ledger{
-    background:var(--paper-2);
-    border:1px solid var(--line);
-    border-radius:var(--r);
-    padding:32px 30px 26px;
-    box-shadow:0 1px 0 rgba(0,0,0,.02),0 24px 48px -34px rgba(20,53,39,.5);
-    position:relative;
-  }
-  .ledger:before{
-    content:"THE TRADE";
-    position:absolute;top:-11px;left:26px;
-    background:var(--clay);color:#fff;font-size:11px;font-weight:600;letter-spacing:.12em;
-    padding:4px 11px;border-radius:6px;
-  }
+  /* ledger signature */
+  .ledger{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:32px 30px 26px;box-shadow:0 24px 48px -34px rgba(20,53,39,.5);position:relative}
+  .ledger:before{content:"THE TRADE";position:absolute;top:-11px;left:26px;background:var(--orange);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;padding:4px 11px;border-radius:6px}
   .ledger-row{display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px dashed var(--line)}
   .ledger-row .lbl{font-size:15px;color:var(--muted)}
-  .ledger-row .val{font-family:var(--display);font-size:27px;font-weight:600;color:var(--green-deep)}
-  .ledger-row.alt .val{color:var(--clay)}
-  .ledger-q{margin-top:20px;font-family:var(--display);font-size:18px;font-weight:500;color:var(--ink);line-height:1.3}
+  .ledger-row .val{font-family:var(--display);font-size:26px;color:var(--pine)}
+  .ledger-row.alt .val{color:var(--orange)}
+  .ledger-q{margin-top:20px;font-family:var(--display);font-size:18px;color:var(--ink);line-height:1.35}
 
-  /* ---------- generic section ---------- */
   section{padding:74px 0}
-  .sec-eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:16px}
-  h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,4.2vw,44px);line-height:1.08;letter-spacing:-.018em;color:var(--green-deep)}
+  .sec-eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+  h2{font-family:var(--display);font-size:clamp(30px,4.2vw,42px);line-height:1.12;color:var(--pine)}
 
   /* reframe */
-  .reframe{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .reframe{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .reframe-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
   .reframe p{margin-top:20px;color:var(--ink);font-size:18px}
   .reframe p+p{margin-top:16px}
-  .pullquote{
-    font-family:var(--display);font-weight:500;font-size:clamp(24px,3vw,32px);line-height:1.25;
-    color:var(--green-deep);padding-left:24px;border-left:4px solid var(--clay);
-  }
-  .pullquote span{color:var(--clay)}
+  .pullquote{font-family:var(--display);font-size:clamp(23px,3vw,30px);line-height:1.3;color:var(--green);padding-left:24px;border-left:4px solid var(--orange)}
+  .pullquote span{color:var(--orange)}
 
-  /* what it is — cards */
+  /* cards */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
-  .card{
-    background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);
-    padding:30px 26px;display:flex;flex-direction:column;
-    transition:transform .2s,box-shadow .2s,border-color .2s;
-  }
-  .card:hover{transform:translateY(-3px);box-shadow:0 24px 40px -32px rgba(20,53,39,.55);border-color:var(--green-line)}
-  .card .kicker{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);margin-bottom:12px}
-  .card h3{font-family:var(--display);font-weight:600;font-size:24px;color:var(--green-deep);margin-bottom:10px;letter-spacing:-.01em}
+  .card{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 24px 40px -32px rgba(20,53,39,.55);border-color:#D8C7AC}
+  .card .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+  .card h3{font-family:var(--display);font-size:25px;color:var(--green);margin-bottom:10px}
   .card p{color:var(--muted);font-size:16.5px;flex:1}
   .card .go{margin-top:18px;font-weight:600;font-size:15px;color:var(--green);display:inline-flex;align-items:center;gap:7px}
   .card:hover .go .arrow{transform:translateX(4px)}
   .card .go .arrow{transition:transform .2s}
 
   /* framework */
-  .framework{background:var(--green-deep);color:#F1ECE0}
+  .framework{background:var(--pine);color:#EFE7D7}
   .framework h2{color:#fff}
-  .framework .sec-eyebrow{color:#E0A883}
-  .framework .lead{margin-top:18px;color:#CFC8B8;max-width:34em;font-size:18px}
+  .framework .sec-eyebrow{color:#E6A074}
+  .framework .lead{margin-top:18px;color:#C9C1B1;max-width:34em;font-size:18px}
   .fw{display:grid;grid-template-columns:auto auto 1fr;gap:40px;align-items:center;margin-top:48px}
-  .fw-col .col-label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#E0A883;margin-bottom:16px}
-  .chip{
-    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
-    border-radius:11px;padding:15px 18px;margin-bottom:12px;
-  }
-  .chip .t{font-family:var(--display);font-size:19px;font-weight:600;color:#fff}
-  .chip .d{font-size:14px;color:#B9B2A2;margin-top:3px}
-  .fw-arrow{font-size:34px;color:var(--clay);text-align:center;font-weight:600}
+  .fw-col .col-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E6A074;margin-bottom:16px}
+  .chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:15px 18px;margin-bottom:12px}
+  .chip .t{font-family:var(--display);font-size:19px;color:#fff}
+  .chip .d{font-size:14px;color:#B4AC9C;margin-top:4px}
+  .fw-arrow{font-size:34px;color:var(--orange);text-align:center;font-weight:700}
   .ends{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .end{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:16px 18px;font-family:var(--display);font-size:19px;font-weight:600;color:#fff}
-  .fw-foot{margin-top:36px;font-size:16px;color:#CFC8B8;border-top:1px solid rgba(255,255,255,.14);padding-top:22px}
+  .end{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:16px 18px;font-family:var(--display);font-size:19px;color:#fff}
+  .fw-foot{margin-top:36px;font-size:16px;color:#C9C1B1;border-top:1px solid rgba(255,255,255,.14);padding-top:22px}
 
-  /* who it's for */
+  /* who */
   .who-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
   .who p{margin-top:20px;font-size:18px;color:var(--ink)}
-  .who .stand{margin-top:24px;font-family:var(--display);font-size:22px;font-weight:500;color:var(--green-deep);line-height:1.3}
+  .who .stand{margin-top:24px;font-family:var(--display);font-size:22px;color:var(--green);line-height:1.35}
 
-  /* closing CTA */
+  /* closing cta */
   .cta-band{background:var(--green);color:#fff;text-align:center}
   .cta-band h2{color:#fff;max-width:16em;margin:0 auto}
-  .cta-band .ns{margin-top:18px;font-family:var(--display);font-size:20px;color:#E9E2D3;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .cta-band .ns .arrow{color:#E9B894}
-  .cta-band .signup{justify-content:center;margin:30px auto 0}
-  .cta-band .signup input{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff}
-  .cta-band .signup input::placeholder{color:rgba(255,255,255,.65)}
-  .cta-band .signup input:focus{border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.2)}
-  .cta-band .btn{background:var(--clay)}
-  .cta-band .btn:hover{background:#A9572F}
-  .cta-band .signup-done{color:#fff}
+  .cta-band .ns{margin-top:18px;font-family:var(--display);font-size:20px;color:#EAE2D2;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .cta-band .btn{margin-top:30px}
+  .cta-band .micro{margin-top:14px;font-size:14px;color:rgba(255,255,255,.7)}
 
   /* footer */
-  footer{background:var(--paper);border-top:1px solid var(--line);padding:46px 0 40px}
-  .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-  .foot-brand{font-family:var(--display);font-weight:600;color:var(--green-deep);font-size:18px}
-  .foot-brand small{display:block;font-family:var(--body);font-weight:400;font-size:13px;color:var(--muted);margin-top:4px}
-  .foot-nav{display:flex;gap:22px;font-size:15px;font-weight:500;color:var(--muted)}
-  .foot-nav a:hover{color:var(--green)}
-  .foot-legal{width:100%;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer{background:var(--cream);border-top:1px solid var(--line);padding:46px 0 40px}
+  .foot-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+  .foot-brand{font-family:var(--display);color:var(--green);font-size:20px}
+  .foot-brand small{display:block;font-family:var(--body);font-weight:400;font-size:13px;color:var(--muted);margin-top:6px}
+  .foot-nav{display:flex;gap:22px;font-size:15px;font-weight:500;color:var(--muted);flex-wrap:wrap}
+  .foot-nav a:hover{color:var(--orange)}
+  .foot-legal{width:100%;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .foot-legal a{color:var(--green);font-weight:600}
 
-  /* reveal animation */
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
 
-  /* ---------- responsive ---------- */
   @media (max-width:920px){
     .hero-grid,.reframe-grid,.who-grid{grid-template-columns:1fr;gap:40px}
     .fw{grid-template-columns:1fr;gap:20px}
@@ -225,42 +154,33 @@
     .hero{padding:54px 0 50px}
     section{padding:56px 0}
     .ends{grid-template-columns:1fr}
-    .signup{flex-direction:column}
-    .signup input,.signup .btn{width:100%}
+    .cta-row{flex-direction:column}
+    .cta-row .btn,.cta-row .btn-ghost{width:100%;text-align:center}
     .brand small{display:none}
   }
-
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
     .reveal{opacity:1;transform:none}
   }
-  :focus-visible{outline:3px solid var(--clay);outline-offset:2px;border-radius:4px}
+  :focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:4px}
 </style>
 </head>
-<body>
+<body id="top">
 
 <header class="site-head">
   <div class="wrap head-inner">
-    <a class="brand" href="#top" aria-label="The Time Rich Project home">
-      <svg class="mark" width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-        <circle cx="15" cy="15" r="13.2" stroke="#1E4D3A" stroke-width="2"/>
-        <path d="M15 15 V6.4" stroke="#1E4D3A" stroke-width="2" stroke-linecap="round"/>
-        <path d="M15 15 L21 18.4" stroke="#C0673D" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="15" cy="15" r="1.7" fill="#C0673D"/>
-      </svg>
-      <span>The Time Rich Project<small>Formerly The Corporate Escapee</small></span>
-    </a>
+    <a class="brand" href="#top">The Time Rich Project<small>Formerly The Corporate Escapee</small></a>
     <nav class="nav" aria-label="Primary">
       <a href="#podcast">Podcast</a>
       <a href="#community">Community</a>
       <a href="#framework">The Map</a>
-      <a class="pill" href="#join">Get the newsletter</a>
+      <a class="pill" href="https://escapeeinsider.beehiiv.com/" target="_blank" rel="noopener">Get the newsletter</a>
     </nav>
     <button class="nav-toggle" onclick="document.querySelector('.nav').style.display='flex';this.style.display='none'">Menu</button>
   </div>
 </header>
 
-<main id="top">
+<main>
 
   <!-- HERO -->
   <section class="hero">
@@ -270,26 +190,16 @@
         <h1>Start treating your <em>time</em> like money.</h1>
         <p class="sub">You would never hand a stranger your savings. But your hours? We give those away without blinking. The Time Rich Project helps Gen X take their time back and build the life they actually want.</p>
         <p class="northstar">More time <span class="arrow">&rarr;</span> more control <span class="arrow">&rarr;</span> more happiness</p>
-
-        <!-- Wire this form to your email provider (Beehiiv / ConvertKit / Mailchimp):
-             set the form's action + method, or drop in your provider's embed,
-             then remove the onsubmit handler below. -->
-        <form class="signup" onsubmit="return handleSignup(event)" novalidate>
-          <input type="email" name="email" placeholder="Your email" aria-label="Your email" required>
-          <button class="btn" type="submit">Get the newsletter</button>
-        </form>
-        <p class="micro">Or <a href="#podcast">listen to A Time Rich Life</a>. No spam. Take your time back at your own pace.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://escapeeinsider.beehiiv.com/" target="_blank" rel="noopener">Get the newsletter</a>
+          <a class="btn-ghost" href="#podcast">Listen to the podcast</a>
+        </div>
+        <p class="micro">Free. The reframe, the tools, and the path to taking your time back.</p>
       </div>
 
       <aside class="ledger" aria-label="The trade: money versus time">
-        <div class="ledger-row">
-          <span class="lbl">Option A</span>
-          <span class="val">+$25,000 / yr</span>
-        </div>
-        <div class="ledger-row alt">
-          <span class="lbl">Option B</span>
-          <span class="val">+25 hrs / wk</span>
-        </div>
+        <div class="ledger-row"><span class="lbl">Option A</span><span class="val">+$25,000 / yr</span></div>
+        <div class="ledger-row alt"><span class="lbl">Option B</span><span class="val">+25 hrs / wk</span></div>
         <p class="ledger-q">Which one makes you richer? Money you can make back. Time you can't.</p>
       </aside>
     </div>
@@ -314,23 +224,25 @@
       <p class="sec-eyebrow">What the Project is</p>
       <h2>Three pieces. Built around connection.</h2>
       <div class="cards">
+        <!-- TODO: add Apple/Spotify podcast URL when live -->
         <article class="card reveal">
           <span class="kicker">Podcast</span>
           <h3>A Time Rich Life</h3>
           <p>Real people living time rich lives. What it looks like, and how they got there. Plus the transitions we are all hitting at once. Not theory. Proof.</p>
-          <a class="go" href="#join">Listen <span class="arrow">&rarr;</span></a>
+          <a class="go" href="#">Listen <span class="arrow">&rarr;</span></a>
         </article>
+        <!-- TODO: add Circle community URL when live -->
         <article class="card reveal" id="community">
           <span class="kicker">Community</span>
           <h3>Your people</h3>
           <p>Find your crew and do the work alongside them. We connect you with members near you, because nobody should figure this out alone.</p>
-          <a class="go" href="#join">Join <span class="arrow">&rarr;</span></a>
+          <a class="go" href="#">Join <span class="arrow">&rarr;</span></a>
         </article>
         <article class="card reveal">
           <span class="kicker">Newsletter</span>
           <h3>In your inbox</h3>
           <p>The reframe, the tools, and the path to taking your time back. Short, useful, no fluff. The easiest place to start.</p>
-          <a class="go" href="#join">Subscribe <span class="arrow">&rarr;</span></a>
+          <a class="go" href="https://escapeeinsider.beehiiv.com/" target="_blank" rel="noopener">Subscribe <span class="arrow">&rarr;</span></a>
         </article>
       </div>
     </div>
@@ -372,7 +284,7 @@
       </div>
       <div>
         <p>And somewhere in your late 40s or 50s you looked up and thought, is this it? Burned out. Frustrated. Watching the security you counted on quietly erode.</p>
-        <p>You are not behind. You just got handed the wrong scoreboard. We are all hitting the same stretch of life at the same time, the career shifts, the kids, the parents, the what-is-next. This is a place to work through the life and the business together.</p>
+        <p>You are not behind. We are all hitting the same stretch of life at the same time, the career shifts, the kids, the parents, the what-is-next. This is a place to work through the life and the business together.</p>
         <p class="stand">Take back your time. Build the life you want and deserve.</p>
       </div>
     </div>
@@ -383,10 +295,8 @@
     <div class="wrap">
       <h2>Start where you are standing.</h2>
       <p class="ns">More time <span class="arrow">&rarr;</span> more control <span class="arrow">&rarr;</span> more happiness</p>
-      <form class="signup" onsubmit="return handleSignup(event)" novalidate>
-        <input type="email" name="email" placeholder="Your email" aria-label="Your email" required>
-        <button class="btn" type="submit">Get the newsletter</button>
-      </form>
+      <a class="btn" href="https://escapeeinsider.beehiiv.com/" target="_blank" rel="noopener">Get the newsletter</a>
+      <p class="micro">Free. Unsubscribe anytime.</p>
     </div>
   </section>
 
@@ -399,29 +309,19 @@
       <nav class="foot-nav" aria-label="Footer">
         <a href="#podcast">Podcast</a>
         <a href="#community">Community</a>
-        <a href="#join">Newsletter</a>
+        <a href="https://escapeeinsider.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
         <a href="#framework">The Map</a>
+        <a href="mailto:BT@BrettTrainor.com">Say hello</a>
       </nav>
     </div>
-    <div class="foot-legal">&copy; 2026 The Time Rich Project. Formerly The Corporate Escapee. It evolved.</div>
+    <div class="foot-legal">
+      <span>&copy; 2026 The Time Rich Project. Formerly The Corporate Escapee. It evolved.</span>
+      <a href="mailto:BT@BrettTrainor.com">BT@BrettTrainor.com</a>
+    </div>
   </div>
 </footer>
 
 <script>
-  // Placeholder signup handler. Replace with your email provider's embed/endpoint.
-  function handleSignup(e){
-    e.preventDefault();
-    var form=e.target;
-    var email=form.querySelector('input[type=email]').value.trim();
-    if(!email || email.indexOf('@')<1){ form.querySelector('input').focus(); return false; }
-    var done=document.createElement('p');
-    done.className='signup-done';
-    done.textContent="You're in. Check your inbox.";
-    form.replaceWith(done);
-    return false;
-  }
-
-  // Scroll reveal (respects reduced motion via CSS)
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
   },{threshold:.12});
