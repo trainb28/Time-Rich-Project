@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Time Rich Project — Take back control of your time</title>
-<meta name="description" content="The Time Rich Project helps Gen X take back control of their time and build the life they want. A podcast, a newsletter, and a community. Formerly The Corporate Escapee.">
+<title>The Time Rich Project: Life after corporate, on your terms</title>
+<meta name="description" content="A program and community helping Gen X transition out of corporate and build the lives they want. Design it. Fund it. Live it. Formerly The Corporate Escapee.">
 
 <meta property="og:title" content="The Time Rich Project">
-<meta property="og:description" content="Take back your time and build the life you want, on your terms. For Gen X who are done giving their best hours away for less and less.">
+<meta property="og:description" content="A program and community helping Gen X transition out of corporate and build the lives they want, and have earned.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,6 @@
     --pine:#073D2F;
     --orange:#C75D3A;
     --orange-d:#A8492A;
-    --navy:#073D2F;
     --ink:#3E3128;
     --muted:#7A6C5C;
     --line:#E7D9C0;
@@ -59,10 +58,10 @@
   .hero{padding:84px 0 72px}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
   .eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:22px}
-  .hero h1{font-family:var(--display);font-size:clamp(40px,6vw,66px);line-height:1.06;color:var(--pine)}
+  .hero h1{font-family:var(--display);font-size:clamp(38px,5.6vw,62px);line-height:1.06;color:var(--pine)}
   .hero h1 em{font-style:normal;color:var(--orange)}
-  .hero .sub{margin-top:26px;font-size:19px;color:var(--ink);max-width:30em}
-  .northstar{margin-top:26px;font-family:var(--display);font-size:21px;color:var(--green);display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .hero .sub{margin-top:26px;font-size:19px;color:var(--ink);max-width:31em}
+  .northstar{margin-top:26px;font-family:var(--display);font-size:20px;color:var(--green);display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 
   .cta-row{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
   .btn{padding:14px 24px;border:0;border-radius:11px;cursor:pointer;background:var(--orange);color:#fff;font-family:var(--body);font-weight:600;font-size:16px;transition:background .18s,transform .18s;white-space:nowrap;display:inline-block}
@@ -71,27 +70,58 @@
   .btn-ghost:hover{background:var(--green);color:var(--cream)}
   .hero .micro{margin-top:14px;font-size:14px;color:var(--muted)}
 
-  /* ledger signature */
-  .ledger{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:32px 30px 26px;box-shadow:0 24px 48px -34px rgba(20,53,39,.5);position:relative}
-  .ledger:before{content:"TAKING CONTROL";position:absolute;top:-11px;left:26px;background:var(--orange);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;padding:4px 11px;border-radius:6px}
-  .ledger-row{display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px dashed var(--line)}
-  .ledger .ll{font-size:16.5px;color:var(--ink);font-weight:500;line-height:1.4}
-  .ledger-row .lbl{font-size:15px;color:var(--muted)}
-  .ledger-row .val{font-family:var(--display);font-size:26px;color:var(--pine)}
-  .ledger-row.alt .val{color:var(--orange)}
-  .ledger-q{margin-top:20px;font-family:var(--display);font-size:18px;color:var(--ink);line-height:1.35}
+  /* hero panel */
+  .panel{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:34px 30px 28px;box-shadow:0 24px 48px -34px rgba(20,53,39,.5);position:relative}
+  .panel:before{content:"THE PROGRAM";position:absolute;top:-11px;left:26px;background:var(--orange);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;padding:4px 11px;border-radius:6px}
+  .panel-row{display:flex;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .panel-row:last-of-type{border-bottom:0}
+  .panel-row .num{font-family:var(--display);font-size:22px;color:var(--orange);line-height:1}
+  .panel-row .t{font-family:var(--display);font-size:21px;color:var(--pine);line-height:1.2}
+  .panel-row .d{font-size:14.5px;color:var(--muted);margin-top:5px;line-height:1.45}
+  .panel-q{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);font-size:15px;color:var(--ink);line-height:1.45}
 
   section{padding:74px 0}
   .sec-eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
   h2{font-family:var(--display);font-size:clamp(30px,4.2vw,42px);line-height:1.12;color:var(--pine)}
 
-  /* reframe */
-  .reframe{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .reframe-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-  .reframe p{margin-top:20px;color:var(--ink);font-size:18px}
-  .reframe p+p{margin-top:16px}
-  .pullquote{font-family:var(--display);font-size:clamp(23px,3vw,30px);line-height:1.3;color:var(--green);padding-left:24px;border-left:4px solid var(--orange)}
+  /* reality */
+  .reality{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .reality-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .reality p{margin-top:20px;color:var(--ink);font-size:18px}
+  .pullquote{font-family:var(--display);font-size:clamp(22px,2.8vw,29px);line-height:1.3;color:var(--green);padding-left:24px;border-left:4px solid var(--orange)}
   .pullquote span{color:var(--orange)}
+
+  /* two choices */
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+  .choice{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
+  .choice.hi{border-color:var(--orange);background:var(--cream-2)}
+  .choice .ct{font-family:var(--display);font-size:21px;color:var(--pine);margin-bottom:8px}
+  .choice.hi .ct{color:var(--orange)}
+  .choice p{margin-top:0;font-size:16.5px;color:var(--muted)}
+
+  /* program */
+  .program{background:var(--pine);color:#EFE7D7}
+  .program h2{color:#fff}
+  .program .sec-eyebrow{color:#E6A074}
+  .program .lead{margin-top:18px;color:#C9C1B1;max-width:36em;font-size:18px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+  .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:26px 24px}
+  .step .sn{font-family:var(--display);font-size:15px;color:#E6A074;letter-spacing:.08em;margin-bottom:12px}
+  .step .st{font-family:var(--display);font-size:25px;color:#fff;line-height:1.15}
+  .step .sd{font-size:16px;color:#C9C1B1;margin-top:12px}
+  .step ul{margin-top:14px;padding-left:0;list-style:none}
+  .step li{font-size:15px;color:#EFE7D7;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.10)}
+  .step li:last-child{border-bottom:0}
+  .prog-foot{margin-top:38px;font-size:17px;color:#C9C1B1;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;max-width:44em}
+
+  /* connection */
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .conn p{margin-top:20px;font-size:18px;color:var(--ink)}
+  .conn .stand{margin-top:26px;font-family:var(--display);font-size:22px;color:var(--green);line-height:1.35}
+  .conn-list{list-style:none;padding:0;margin-top:8px}
+  .conn-list li{padding:16px 0;border-bottom:1px dashed var(--line);font-size:17px}
+  .conn-list li:last-child{border-bottom:0}
+  .conn-list strong{font-family:var(--display);font-weight:400;font-size:19px;color:var(--green);display:block;margin-bottom:3px}
 
   /* cards */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
@@ -104,30 +134,19 @@
   .card:hover .go .arrow{transform:translateX(4px)}
   .card .go .arrow{transition:transform .2s}
 
-  /* framework */
-  .framework{background:var(--pine);color:#EFE7D7}
-  .framework h2{color:#fff}
-  .framework .sec-eyebrow{color:#E6A074}
-  .framework .lead{margin-top:18px;color:#C9C1B1;max-width:34em;font-size:18px}
-  .fw{display:grid;grid-template-columns:auto auto 1fr;gap:40px;align-items:center;margin-top:48px}
-  .fw-col .col-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E6A074;margin-bottom:16px}
-  .chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:15px 18px;margin-bottom:12px}
-  .chip .t{font-family:var(--display);font-size:19px;color:#fff}
-  .chip .d{font-size:14px;color:#B4AC9C;margin-top:4px}
-  .fw-arrow{font-size:34px;color:var(--orange);text-align:center;font-weight:700}
-  .ends{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .end{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:16px 18px;font-family:var(--display);font-size:19px;color:#fff}
-  .fw-foot{margin-top:36px;font-size:16px;color:#C9C1B1;border-top:1px solid rgba(255,255,255,.14);padding-top:22px}
-
   /* who */
-  .who-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
-  .who p{margin-top:20px;font-size:18px;color:var(--ink)}
-  .who .stand{margin-top:24px;font-family:var(--display);font-size:22px;color:var(--green);line-height:1.35}
+  .who{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .who-head{max-width:34em}
+  .who-head p{margin-top:18px;font-size:18px;color:var(--ink)}
+  .whos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .whobox{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
+  .whobox .wt{font-family:var(--display);font-size:22px;color:var(--green);margin-bottom:10px}
+  .whobox p{font-size:16.5px;color:var(--muted)}
 
   /* closing cta */
   .cta-band{background:var(--green);color:#fff;text-align:center}
-  .cta-band h2{color:#fff;max-width:16em;margin:0 auto}
-  .cta-band .ns{margin-top:18px;font-family:var(--display);font-size:20px;color:#EAE2D2;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .cta-band h2{color:#fff;max-width:17em;margin:0 auto}
+  .cta-band .ns{margin-top:18px;font-family:var(--display);font-size:20px;color:#EAE2D2;max-width:26em;margin-left:auto;margin-right:auto}
   .cta-band .btn{margin-top:30px}
   .cta-band .micro{margin-top:14px;font-size:14px;color:rgba(255,255,255,.7)}
 
@@ -145,11 +164,9 @@
   .reveal.in{opacity:1;transform:none}
 
   @media (max-width:920px){
-    .hero-grid,.reframe-grid,.who-grid{grid-template-columns:1fr;gap:40px}
-    .fw{grid-template-columns:1fr;gap:20px}
-    .fw-arrow{transform:rotate(90deg);margin:4px 0}
-    .cards{grid-template-columns:1fr}
-    .ledger{max-width:440px}
+    .hero-grid,.reality-grid,.conn-grid{grid-template-columns:1fr;gap:40px}
+    .steps,.cards,.whos,.choices{grid-template-columns:1fr}
+    .panel{max-width:460px}
   }
   @media (max-width:620px){
     body{font-size:17px}
@@ -158,7 +175,6 @@
     .nav-toggle{display:block}
     .hero{padding:54px 0 50px}
     section{padding:56px 0}
-    .ends{grid-template-columns:1fr}
     .cta-row{flex-direction:column}
     .cta-row .btn,.cta-row .btn-ghost{width:100%;text-align:center}
     .brand small{display:none}
@@ -176,9 +192,9 @@
   <div class="wrap head-inner">
     <a class="brand" href="#top">The Time Rich Project<small>Formerly The Corporate Escapee</small></a>
     <nav class="nav" aria-label="Primary">
-      <a href="#podcast">Podcast</a>
+      <a href="#program">The Program</a>
       <a href="#community">Community</a>
-      <a href="#framework">The Map</a>
+      <a href="#podcast">Podcast</a>
       <a class="pill" href="https://stan.store/thecorporateescapee/p/see-where-your-time-actually-goes" target="_blank" rel="noopener">Get the Starter Kit</a>
     </nav>
     <button class="nav-toggle" onclick="document.querySelector('.nav').style.display='flex';this.style.display='none'">Menu</button>
@@ -191,106 +207,164 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">For Gen X quietly asking, is this it?</p>
-        <h1>Take back control of your <em>time</em>.</h1>
-        <p class="sub">You did everything right, then looked up in your late 40s or 50s and felt that something was off. The problem was never the job or the money. Your time stopped being yours. The Time Rich Project helps Gen X take it back and build the life they want.</p>
-        <p class="northstar">More time <span class="arrow">&rarr;</span> more control <span class="arrow">&rarr;</span> more happiness</p>
+        <p class="eyebrow">For Gen X, whether you are still in or already out</p>
+        <h1>Life after corporate, <em>on your terms</em>.</h1>
+        <p class="sub">The Time Rich Project is a program and community dedicated to helping Gen Xers transition out of corporate and build the lives they want, and have earned. It all runs on time. You take back your hours, then you decide where they go.</p>
+        <p class="northstar">Design it <span class="arrow">&rarr;</span> Fund it <span class="arrow">&rarr;</span> Live it</p>
         <div class="cta-row">
-          <a class="btn" href="https://stan.store/thecorporateescapee/p/see-where-your-time-actually-goes" target="_blank" rel="noopener">Get the free Starter Kit</a>
-          <a class="btn-ghost" href="https://open.spotify.com/show/5UQSv8iKydo8E2cevuIAB5" target="_blank" rel="noopener">Listen to the podcast</a>
+          <a class="btn" href="https://trp-collective.circle.so/checkout/the-time-rich-project-collective" target="_blank" rel="noopener">Join the Collective</a>
+          <a class="btn-ghost" href="https://stan.store/thecorporateescapee/p/see-where-your-time-actually-goes" target="_blank" rel="noopener">Get the free Starter Kit</a>
         </div>
-        <p class="micro">Five free worksheets to take back your time. No spam.</p>
+        <p class="micro">Start free. Six worksheets to see where your time actually goes. No spam.</p>
       </div>
 
-      <aside class="ledger" aria-label="What taking control of your time looks like">
-        <div class="ledger-row"><span class="ll">Reclaim your evenings without quitting your job.</span></div>
-        <div class="ledger-row"><span class="ll">Take the new role on your terms, not theirs.</span></div>
-        <div class="ledger-row"><span class="ll">Choose less income for more of what matters.</span></div>
-        <p class="ledger-q">Different paths. Same move. You chose it.</p>
+      <aside class="panel" aria-label="The three part program">
+        <div class="panel-row">
+          <span class="num">1</span>
+          <div><div class="t">Design Your Life</div><div class="d">Connection. Mind &amp; Body. Purpose. Fun. Decide what you actually want before you count what it costs.</div></div>
+        </div>
+        <div class="panel-row">
+          <span class="num">2</span>
+          <div><div class="t">Fund Your Life</div><div class="d">Ongoing income in the fewest hours. You need less than you think, and it does not have to be another job.</div></div>
+        </div>
+        <div class="panel-row">
+          <span class="num">3</span>
+          <div><div class="t">Live Your Life</div><div class="d">The routines and rhythm to actually live it, once nobody is handing you a calendar.</div></div>
+        </div>
+        <p class="panel-q">You do not do it alone. That is the whole point.</p>
       </aside>
     </div>
   </section>
 
-  <!-- REFRAME -->
-  <section class="reframe reveal">
-    <div class="wrap reframe-grid">
+  <!-- THE REALITY -->
+  <section class="reality reveal">
+    <div class="wrap">
+      <div class="reality-grid">
+        <div>
+          <p class="sec-eyebrow">The reality</p>
+          <h2>Corporate ends for every one of us.</h2>
+          <p>Some will hang on longer than others, but it ends. That is not a scare tactic, it is arithmetic. Careers are ending earlier, pensions are gone, and we are living decades longer than the old model was built for.</p>
+          <p>If you are still in it, you may not see it coming. I did not. They made the decision for me. What I decided was that I was not going back.</p>
+        </div>
+        <blockquote class="pullquote">Nothing about this is easy. But if everything is hard, <span>choose the hard that benefits you.</span></blockquote>
+      </div>
+
+      <div class="choices">
+        <div class="choice">
+          <div class="ct">Hang on</div>
+          <p>Keep your head down, hope it lasts, and figure it out when the decision gets made for you. Most people pick this one by default, not on purpose.</p>
+        </div>
+        <div class="choice hi">
+          <div class="ct">Build</div>
+          <p>Start now, while you still have runway. Decide what you want, work out how to fund it, and meet the exit on your terms instead of theirs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROGRAM -->
+  <section id="program" class="program">
+    <div class="wrap">
+      <p class="sec-eyebrow">The program</p>
+      <h2>Design it. Fund it. Live it.</h2>
+      <p class="lead">Getting out is one step. What nobody prepares you for is everything after. Thirty years of someone else setting your priorities, and then the calendar is blank. There is a sequence to this, and it is not complicated.</p>
+      <div class="steps">
+        <article class="step reveal">
+          <div class="sn">ONE</div>
+          <div class="st">Design Your Life</div>
+          <div class="sd">Before you price it, decide what you actually want. Four areas worth your hours:</div>
+          <ul>
+            <li>Connection</li>
+            <li>Mind &amp; Body</li>
+            <li>Purpose</li>
+            <li>Fun</li>
+          </ul>
+        </article>
+        <article class="step reveal">
+          <div class="sn">TWO</div>
+          <div class="st">Fund Your Life</div>
+          <div class="sd">Find out what your life actually costs, then fund it in the fewest hours possible. There are hundreds of ways to make money that are not another full-time job. The goal is not replacing your old salary. It is funding the life you just designed.</div>
+        </article>
+        <article class="step reveal">
+          <div class="sn">THREE</div>
+          <div class="st">Live Your Life</div>
+          <div class="sd">Owning all of your time is a blessing and a curse until you learn to manage it. This is the structure, the routines, and the rhythm that make the design real. Once you get it, you will never give your time away again.</div>
+        </article>
+      </div>
+      <p class="prog-foot">Everyone is smart enough to figure this out on their own. I did. It just took me years, I did it alone, and it did not have to be that hard.</p>
+    </div>
+  </section>
+
+  <!-- CONNECTION -->
+  <section class="conn">
+    <div class="wrap conn-grid">
       <div>
-        <p class="sec-eyebrow">The reframe</p>
-        <h2>I thought it was corporate. It wasn't.</h2>
-        <p>I spent 25 years playing the game I was supposed to play, because it was the right thing to do. Then it stopped working, and I couldn't figure out why.</p>
-        <p>I thought it was corporate. It wasn't. I thought I needed to make more money. That wasn't it either. It turned out to be time. More accurately, control over my time. Money you can make back. Time you can't.</p>
+        <p class="sec-eyebrow">Why the community</p>
+        <h2>The hardest part is not the money. It is how alone it feels.</h2>
+        <p>You do not just lose a paycheck when corporate ends. You lose the coworkers, the routine, and the built-in answer to what do you do. Your friends still inside cannot relate. Your spouse is worried about the money. Nobody around you is going through the same thing at the same time.</p>
+        <p>I did it alone for years. Every mistake was one I had to make myself to learn from. Starting this community changed that, not because I finally had the answers, but because I found people asking the same questions.</p>
+        <p class="stand">The connection is the cake. The program is the icing.</p>
       </div>
-      <blockquote class="pullquote">You do not have to quit your job to start. <span>Wherever you are standing, the goal is the same.</span> Take back control of your time.</blockquote>
-    </div>
-  </section>
-
-  <!-- WHAT IT IS -->
-  <section id="podcast">
-    <div class="wrap">
-      <p class="sec-eyebrow">What the Project is</p>
-      <h2>Three pieces. Built around connection.</h2>
-      <div class="cards">
-        <!-- TODO: add Apple/Spotify podcast URL when live -->
-        <article class="card reveal">
-          <span class="kicker">Podcast</span>
-          <h3>The Time Rich Project Podcast</h3>
-          <p>Real people living time rich lives. What it looks like, and how they got there. Plus the transitions we are all hitting at once. Not theory. Proof.</p>
-          <a class="go" href="https://open.spotify.com/show/5UQSv8iKydo8E2cevuIAB5" target="_blank" rel="noopener">Listen on Spotify <span class="arrow">&rarr;</span></a>
-        </article>
-        <article class="card reveal" id="community">
-          <span class="kicker">Community</span>
-          <h3>The Collective</h3>
-          <p>Life is too damn short to do this alone. Get your own circle of five, monthly working sessions, and workshops built to help you take back your time. People who get it, pulling in the same direction.</p>
-          <a class="go" href="https://trp-collective.circle.so/checkout/the-time-rich-project-collective" target="_blank" rel="noopener">Join the Collective <span class="arrow">&rarr;</span></a>
-        </article>
-        <article class="card reveal">
-          <span class="kicker">Newsletter</span>
-          <h3>In your inbox</h3>
-          <p>The reframe, the tools, and the path to taking your time back. Short, useful, no fluff. The easiest place to start.</p>
-          <a class="go" href="https://trpnewsletter.beehiiv.com/" target="_blank" rel="noopener">Subscribe <span class="arrow">&rarr;</span></a>
-        </article>
+      <div>
+        <ul class="conn-list">
+          <li><strong>Your circle of five</strong>A small group of Gen Xers on the same path, so you are never working through this by yourself.</li>
+          <li><strong>Monthly working sessions</strong>The Builders, for people growing something without letting it take their life back. Gen X Side Hustle, for funding the life you want in the fewest hours.</li>
+          <li><strong>Connection and collaboration</strong>Not a support group and not a lecture. People who work, ideate, and push each other forward.</li>
+          <li><strong>The program and the tools</strong>Design it, fund it, live it, with the worksheets and structure to actually run it.</li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- FRAMEWORK -->
-  <section id="framework" class="framework">
-    <div class="wrap">
-      <p class="sec-eyebrow">How it works</p>
-      <h2>Get your time back. Spend it on what matters.</h2>
-      <p class="lead">It comes down to two moves to free up your time, and four things worth spending it on. That's the whole idea.</p>
-      <div class="fw">
-        <div class="fw-col reveal">
-          <div class="col-label">Two moves to free your time</div>
-          <div class="chip"><div class="t">Focus</div><div class="d">Stop doing what doesn't matter and reclaim the hours you already have.</div></div>
-          <div class="chip"><div class="t">Low-Friction Income</div><div class="d">Work with the best return on your hours. And return isn't only money. It can be purpose, energy, or fun.</div></div>
-        </div>
-        <div class="fw-arrow" aria-hidden="true">&rarr;</div>
-        <div class="fw-col reveal">
-          <div class="col-label">Four things worth your time</div>
-          <div class="ends">
-            <div class="end">Relationships</div>
-            <div class="end">Health</div>
-            <div class="end">Purpose</div>
-            <div class="end">Fun</div>
-          </div>
-        </div>
-      </div>
-      <p class="fw-foot">It's not a one-time fix. You see where you are, make a move, check what changed, and adjust. That's the whole practice, and you don't do it alone.</p>
     </div>
   </section>
 
   <!-- WHO -->
   <section class="who">
-    <div class="wrap who-grid">
-      <div>
-        <p class="sec-eyebrow">If this sounds like you</p>
+    <div class="wrap">
+      <div class="who-head">
+        <p class="sec-eyebrow">Who this is for</p>
         <h2>You paid your dues. You did everything right.</h2>
+        <p>It does not matter where you are standing right now. The work is the same, only the urgency changes.</p>
       </div>
-      <div>
-        <p>And somewhere in your late 40s or 50s you looked up and thought, is this it? Burned out. Frustrated. Watching the security you counted on quietly erode.</p>
-        <p>You are not behind. We are all hitting the same stretch of life at the same time, the career shifts, the kids, the parents, the what-is-next. This is a place to work through the life and the business together.</p>
-        <p class="stand">Take back control of your time. Build the life you want and have earned.</p>
+      <div class="whos">
+        <article class="whobox reveal">
+          <div class="wt">Still in corporate</div>
+          <p>You have the biggest advantage there is: time and income to prepare. Starting now is not admitting anything. It is the smartest thing you can do.</p>
+        </article>
+        <article class="whobox reveal">
+          <div class="wt">Just got the news</div>
+          <p>Yes, sort out the income. That part is real. Just do not rebuild the same cage while you are scared. This is your chance to design something better.</p>
+        </article>
+        <article class="whobox reveal">
+          <div class="wt">Already out</div>
+          <p>You got out and it still is not quite right. Escaping was one step. Now it is about what you build with the time you finally control.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE PIECES -->
+  <section id="podcast">
+    <div class="wrap">
+      <p class="sec-eyebrow">Where to start</p>
+      <h2>Three ways in.</h2>
+      <div class="cards">
+        <article class="card reveal" id="community">
+          <span class="kicker">Community</span>
+          <h3>The Collective</h3>
+          <p>Life is too damn short to do this alone. Your circle of five, monthly working sessions, and the full program. Gen Xers making the same transition, together.</p>
+          <a class="go" href="https://trp-collective.circle.so/checkout/the-time-rich-project-collective" target="_blank" rel="noopener">Join the Collective <span class="arrow">&rarr;</span></a>
+        </article>
+        <article class="card reveal">
+          <span class="kicker">Podcast</span>
+          <h3>The Time Rich Project Podcast</h3>
+          <p>Real people living on the other side of corporate. What it looks like and how they got there. I ask all of them if they would go back. Not one has said yes.</p>
+          <a class="go" href="https://open.spotify.com/show/5UQSv8iKydo8E2cevuIAB5" target="_blank" rel="noopener">Listen on Spotify <span class="arrow">&rarr;</span></a>
+        </article>
+        <article class="card reveal">
+          <span class="kicker">Newsletter</span>
+          <h3>In your inbox</h3>
+          <p>What corporate taught you that you now have to unlearn, and what actually works on the other side. Short, useful, no fluff.</p>
+          <a class="go" href="https://trpnewsletter.beehiiv.com/" target="_blank" rel="noopener">Subscribe <span class="arrow">&rarr;</span></a>
+        </article>
       </div>
     </div>
   </section>
@@ -298,10 +372,10 @@
   <!-- CLOSING CTA -->
   <section id="join" class="cta-band">
     <div class="wrap">
-      <h2>Start where you are standing.</h2>
-      <p class="ns">More time <span class="arrow">&rarr;</span> more control <span class="arrow">&rarr;</span> more happiness</p>
-      <a class="btn" href="https://stan.store/thecorporateescapee/p/see-where-your-time-actually-goes" target="_blank" rel="noopener">Get the free Starter Kit</a>
-      <p class="micro">Five free worksheets. No spam.</p>
+      <h2>The exit is coming either way.</h2>
+      <p class="ns">This is how you meet it on your terms, with people doing the same thing.</p>
+      <a class="btn" href="https://trp-collective.circle.so/checkout/the-time-rich-project-collective" target="_blank" rel="noopener">Join the Collective</a>
+      <p class="micro">Not ready? <a href="https://stan.store/thecorporateescapee/p/see-where-your-time-actually-goes" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Start with the free Starter Kit</a>.</p>
     </div>
   </section>
 
@@ -310,12 +384,12 @@
 <footer>
   <div class="wrap">
     <div class="foot-inner">
-      <div class="foot-brand">The Time Rich Project<small>Take back your time. Build the life you want.</small></div>
+      <div class="foot-brand">The Time Rich Project<small>Life after corporate, on your terms.</small></div>
       <nav class="foot-nav" aria-label="Footer">
-        <a href="#podcast">Podcast</a>
+        <a href="#program">The Program</a>
         <a href="#community">Community</a>
+        <a href="#podcast">Podcast</a>
         <a href="https://trpnewsletter.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
-        <a href="#framework">The Map</a>
         <a href="mailto:BT@BrettTrainor.com">Say hello</a>
       </nav>
     </div>
