@@ -99,6 +99,20 @@
   .choice.hi .ct{color:var(--orange)}
   .choice p{margin-top:0;font-size:16.5px;color:var(--muted)}
 
+  /* expect */
+  .expect-head{max-width:36em}
+  .expect-head p{margin-top:18px;font-size:18px;color:var(--ink)}
+  .myths{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}
+  .myth{border:1px dashed var(--line);border-radius:var(--r);padding:24px;background:var(--cream-2)}
+  .myth .ml{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .myth .mt{font-family:var(--display);font-size:20px;color:var(--pine);line-height:1.25}
+  .myth p{font-size:16px;color:var(--muted);margin-top:8px}
+  .truth{margin-top:30px;font-family:var(--display);font-size:clamp(21px,2.6vw,26px);line-height:1.3;color:var(--green);padding-left:24px;border-left:4px solid var(--orange)}
+  .reals{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;margin-top:36px;list-style:none;padding:0}
+  .reals li{padding:16px 0;border-bottom:1px dashed var(--line);font-size:16.5px;color:var(--muted)}
+  .reals li strong{font-family:var(--display);font-weight:400;font-size:18.5px;color:var(--green);display:block;margin-bottom:3px}
+  .expect-foot{margin-top:34px;font-size:18px;color:var(--ink);max-width:44em}
+
   /* program */
   .program{background:var(--pine);color:#EFE7D7}
   .program h2{color:#fff}
@@ -165,7 +179,8 @@
 
   @media (max-width:920px){
     .hero-grid,.reality-grid,.conn-grid{grid-template-columns:1fr;gap:40px}
-    .steps,.cards,.whos,.choices{grid-template-columns:1fr}
+    .steps,.cards,.whos,.choices,.myths{grid-template-columns:1fr}
+    .reals{grid-template-columns:1fr 1fr;gap:0 28px}
     .panel{max-width:460px}
   }
   @media (max-width:620px){
@@ -178,6 +193,7 @@
     .cta-row{flex-direction:column}
     .cta-row .btn,.cta-row .btn-ghost{width:100%;text-align:center}
     .brand small{display:none}
+    .reals{grid-template-columns:1fr}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -259,6 +275,43 @@
           <p>Start now, while you still have runway. Decide what you want, work out how to fund it, and meet the exit on your terms instead of theirs.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- WHAT TO EXPECT -->
+  <section class="expect">
+    <div class="wrap">
+      <div class="expect-head">
+        <p class="sec-eyebrow">What to expect</p>
+        <h2>The unknown is the scary part.</h2>
+        <p>Most people picture one of two things when they imagine life after corporate. Both are available if you choose them. Most people choose neither.</p>
+      </div>
+
+      <div class="myths">
+        <div class="myth reveal">
+          <div class="ml">Myth one</div>
+          <div class="mt">It is corporate, but lighter.</div>
+          <p>Same kind of work, fewer meetings, better hours. A softer version of what you already know.</p>
+        </div>
+        <div class="myth reveal">
+          <div class="ml">Myth two</div>
+          <div class="mt">It is an all-in entrepreneurial grind.</div>
+          <p>Raising money, building a company, working 80 hours to escape working 50.</p>
+        </div>
+      </div>
+
+      <blockquote class="truth">What actually happens is stranger, and better, than either one. Nobody describes it accurately, which is exactly why it feels so scary.</blockquote>
+
+      <ul class="reals">
+        <li><strong>The calendar goes blank</strong>Nobody sets your priorities now. That is freedom, eventually. At first it is disorienting.</li>
+        <li><strong>Income gets lumpy</strong>No more Friday deposit. The total can be fine while the rhythm still messes with your head.</li>
+        <li><strong>You lose the scoreboard</strong>No reviews, no promotion cycle. You build your own measure of how you are doing.</li>
+        <li><strong>You lose the coworkers</strong>The one nobody warns you about. You did not just lose a job, you lost your daily social life.</li>
+        <li><strong>Days stop having shapes</strong>Sunday night dread disappears. So does the structure that made rest feel earned.</li>
+        <li><strong>Guilt shows up</strong>Resting on a Wednesday feels illegal for about a year. Busy has meant worth for three decades.</li>
+      </ul>
+
+      <p class="expect-foot">None of that means you made a mistake. That is the process, and almost everyone hits most of it. The good news is the first stretch is the hardest, you need less money than you think, and nobody is judging you. That feeling is corporate too.</p>
     </div>
   </section>
 
