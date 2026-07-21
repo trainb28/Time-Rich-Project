@@ -100,13 +100,14 @@
   .choice p{margin-top:0;font-size:16.5px;color:var(--muted)}
 
   /* press */
-  .press{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
-  .press-inner{display:flex;align-items:center;gap:26px;flex-wrap:wrap;justify-content:center;text-align:center}
-  .press-label{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
-  .press-mark{font-family:var(--display);font-size:30px;color:var(--pine);line-height:1;letter-spacing:.01em}
-  .press-quote{font-size:16px;color:var(--ink);max-width:44em;line-height:1.45}
-  .press-quote a{color:var(--green);font-weight:600;border-bottom:1px solid var(--line);transition:color .18s,border-color .18s}
-  .press-quote a:hover{color:var(--orange);border-color:var(--orange)}
+  .press{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
+  .press-label{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:18px}
+  .press-row{display:flex;align-items:center;justify-content:center;gap:14px 42px;flex-wrap:wrap}
+  .press-row a{font-family:var(--display);font-size:25px;color:var(--pine);line-height:1;opacity:.72;transition:opacity .18s,color .18s;white-space:nowrap}
+  .press-row a:hover{opacity:1;color:var(--orange)}
+  .press-row a.sm{font-size:18px}
+  .press-quote{margin-top:20px;text-align:center;font-size:15.5px;color:var(--muted);line-height:1.5}
+  .press-quote em{font-style:normal;color:var(--green);font-weight:600}
 
   /* expect */
   .expect-head{max-width:36em}
@@ -203,6 +204,9 @@
     .cta-row .btn,.cta-row .btn-ghost{width:100%;text-align:center}
     .brand small{display:none}
     .reals{grid-template-columns:1fr}
+    .press-row{gap:12px 26px}
+    .press-row a{font-size:20px}
+    .press-row a.sm{font-size:15px}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -263,10 +267,16 @@
 
   <!-- PRESS -->
   <section class="press">
-    <div class="wrap press-inner">
-      <span class="press-label">As featured in</span>
-      <span class="press-mark">Inc.</span>
-      <p class="press-quote">&ldquo;He left corporate and discovered a surprising truth: having 4 clients is safer than having 1 boss.&rdquo; <a href="https://www.inc.com/nicole-ramirez/he-left-corporate-and-discovered-a-surprising-truth-having-4-clients-is-safer-than-having-1-boss/91376082" target="_blank" rel="noopener">Read the story</a></p>
+    <div class="wrap">
+      <p class="press-label">As featured in</p>
+      <div class="press-row">
+        <a href="https://fortune.com/2024/12/09/gen-x-warning-brett-trainor-senior-executives-ceo-playbook/" target="_blank" rel="noopener">Fortune</a>
+        <a href="https://www.forbes.com/sites/tomokoyokoi/2024/03/14/is-fractional-work-right-for-you/" target="_blank" rel="noopener">Forbes</a>
+        <a class="sm" href="https://hbr.org/2024/07/how-part-time-senior-leaders-can-help-your-business" target="_blank" rel="noopener">Harvard Business Review</a>
+        <a href="https://www.inc.com/nicole-ramirez/he-left-corporate-and-discovered-a-surprising-truth-having-4-clients-is-safer-than-having-1-boss/91376082" target="_blank" rel="noopener">Inc.</a>
+        <a class="sm" href="https://www.fastcompany.com/91142141/gen-x-overlooked-millennials-baby-boomers-shadow" target="_blank" rel="noopener">Fast Company</a>
+      </div>
+      <p class="press-quote"><em>&ldquo;Top career coach warns Gen X&hellip;&rdquo;</em> &nbsp;Fortune</p>
     </div>
   </section>
 
