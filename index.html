@@ -3,161 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brett Trainor: Speaker, Coach, Founder of The Time Rich Project</title>
-<meta name="description" content="Brett Trainor helps Gen X transition out of corporate and build the lives they want. Speaking, 1:1 coaching, and The Time Rich Project. Featured in Fortune, Forbes, HBR, and Inc.">
+<title>The Time Rich Project: Life after corporate, on your terms</title>
+<meta name="description" content="A program and community helping Gen X transition out of corporate and build the lives they want. Design it. Fund it. Live it. Formerly The Corporate Escapee.">
 
-<meta property="og:title" content="Brett Trainor">
-<meta property="og:description" content="Helping Gen X transition out of corporate and build the lives they want, and have earned.">
+<meta property="og:title" content="The Time Rich Project">
+<meta property="og:description" content="A program and community helping Gen X transition out of corporate and build the lives they want, and have earned.">
 <meta property="og:type" content="website">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Display font is Road Race (Canva). Cinzel is the web stand-in. -->
+<!-- Brand display font is Road Race (Canva). Cinzel is the web stand-in below.
+     To use the real Road Race on the web, self-host it and add:
+     @font-face{font-family:'Road Race';src:url('/fonts/RoadRace.woff2') format('woff2');font-weight:400 700;font-display:swap;}
+     then set --display to 'Road Race','Cinzel',serif -->
 
 <style>
   :root{
-    --cream:#FBF3E2; --cream-2:#FCF6E8; --green:#0A4B39; --pine:#073D2F;
-    --orange:#C75D3A; --orange-d:#A8492A; --ink:#3E3128; --muted:#7A6C5C;
-    --line:#E7D9C0; --display:'Cinzel',Georgia,serif;
+    --cream:#FBF3E2;
+    --cream-2:#FCF6E8;
+    --green:#0A4B39;
+    --pine:#073D2F;
+    --orange:#C75D3A;
+    --orange-d:#A8492A;
+    --ink:#3E3128;
+    --muted:#7A6C5C;
+    --line:#E7D9C0;
+    --display:'Cinzel',Georgia,serif;
     --body:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-    --wrap:1120px; --r:14px;
+    --wrap:1120px;
+    --r:14px;
   }
+
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
   .arrow{color:var(--orange);font-weight:700;display:inline-block}
 
-  .site-head{position:sticky;top:0;z-index:50;background:rgba(250,242,228,.88);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+  /* header */
+  .site-head{position:sticky;top:0;z-index:50;background:rgba(250,242,228,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
   .head-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
-  .brand{font-family:var(--display);font-size:22px;color:var(--green);line-height:1}
+  .brand{font-family:var(--display);font-size:23px;color:var(--green);line-height:1}
   .brand small{display:block;font-family:var(--body);font-weight:500;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-  .nav{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:500}
+  .nav{display:flex;align-items:center;gap:28px;font-size:15px;font-weight:500}
   .nav a{color:var(--green);transition:color .18s}
   .nav a:hover{color:var(--orange)}
-  .nav .pill{color:#fff;background:var(--orange);padding:9px 17px;border-radius:999px;transition:background .18s}
-  .nav .pill:hover{background:var(--orange-d);color:#fff}
+  .nav .pill{color:#fff;background:var(--orange);padding:9px 17px;border-radius:999px;transition:background .18s,transform .18s}
+  .nav .pill:hover{background:var(--orange-d);transform:translateY(-1px);color:#fff}
   .nav-toggle{display:none;background:none;border:0;cursor:pointer;color:var(--green);font-size:15px;font-weight:600}
 
   /* hero */
-  .hero{padding:76px 0 56px}
-  .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
-  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
-  .hero h1{font-family:var(--display);font-size:clamp(36px,5.2vw,56px);line-height:1.08;color:var(--pine)}
+  .hero{padding:84px 0 72px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:22px}
+  .hero h1{font-family:var(--display);font-size:clamp(38px,5.6vw,62px);line-height:1.06;color:var(--pine)}
   .hero h1 em{font-style:normal;color:var(--orange)}
-  .hero .sub{margin-top:24px;font-size:19px;max-width:32em}
-  .cta-row{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
-  .btn{padding:14px 24px;border-radius:11px;background:var(--orange);color:#fff;font-weight:600;font-size:16px;transition:background .18s,transform .18s;display:inline-block}
+  .hero .sub{margin-top:26px;font-size:19px;color:var(--ink);max-width:31em}
+  .northstar{margin-top:26px;font-family:var(--display);font-size:20px;color:var(--green);display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+  .cta-row{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border:0;border-radius:11px;cursor:pointer;background:var(--orange);color:#fff;font-family:var(--body);font-weight:600;font-size:16px;transition:background .18s,transform .18s;white-space:nowrap;display:inline-block}
   .btn:hover{background:var(--orange-d);transform:translateY(-1px);color:#fff}
   .btn-ghost{padding:14px 22px;border:1.5px solid var(--green);border-radius:11px;color:var(--green);font-weight:600;font-size:16px;transition:background .18s,color .18s;display:inline-block}
   .btn-ghost:hover{background:var(--green);color:var(--cream)}
-  .portrait{position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:380px}
-  .portrait:before{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:330px;height:330px;border-radius:50%;background:var(--cream-2);border:1px solid var(--line)}
-  .portrait img{position:relative;width:100%;max-width:400px;height:auto;display:block}
+  .hero .micro{margin-top:14px;font-size:14px;color:var(--muted)}
+
+  /* hero panel */
+  .panel{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:34px 30px 28px;box-shadow:0 24px 48px -34px rgba(20,53,39,.5);position:relative}
+  .panel:before{content:"THE PROGRAM";position:absolute;top:-11px;left:26px;background:var(--orange);color:#fff;font-size:11px;font-weight:700;letter-spacing:.12em;padding:4px 11px;border-radius:6px}
+  .panel-row{display:flex;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .panel-row:last-of-type{border-bottom:0}
+  .panel-row .num{font-family:var(--display);font-size:22px;color:var(--orange);line-height:1}
+  .panel-row .t{font-family:var(--display);font-size:21px;color:var(--pine);line-height:1.2}
+  .panel-row .d{font-size:14.5px;color:var(--muted);margin-top:5px;line-height:1.45}
+  .panel-q{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);font-size:15px;color:var(--ink);line-height:1.45}
+
+  section{padding:74px 0}
+  .sec-eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+  h2{font-family:var(--display);font-size:clamp(30px,4.2vw,42px);line-height:1.12;color:var(--pine)}
+
+  /* reality */
+  .reality{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .reality-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .reality p{margin-top:20px;color:var(--ink);font-size:18px}
+  .pullquote{font-family:var(--display);font-size:clamp(22px,2.8vw,29px);line-height:1.3;color:var(--green);padding-left:24px;border-left:4px solid var(--orange)}
+  .pullquote span{color:var(--orange)}
+
+  /* two choices */
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+  .choice{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
+  .choice.hi{border-color:var(--orange);background:var(--cream-2)}
+  .choice .ct{font-family:var(--display);font-size:21px;color:var(--pine);margin-bottom:8px}
+  .choice.hi .ct{color:var(--orange)}
+  .choice p{margin-top:0;font-size:16.5px;color:var(--muted)}
 
   /* press */
   .press{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
   .press-label{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:18px}
   .press-row{display:flex;align-items:center;justify-content:center;gap:14px 42px;flex-wrap:wrap}
-  .press-row a{font-family:var(--display);font-size:25px;color:var(--pine);line-height:1;opacity:.72;transition:opacity .18s,color .18s;white-space:nowrap;display:inline-flex;align-items:center}
+  .press-row a{font-family:var(--display);font-size:25px;color:var(--pine);line-height:1;opacity:.72;transition:opacity .18s,color .18s;white-space:nowrap}
   .press-row a:hover{opacity:1;color:var(--orange)}
   .press-row a.sm{font-size:18px}
-  .press-row img{height:26px;width:auto;display:block;filter:grayscale(1)}
-  .press-row a.sm img{height:20px}
-  .press-quote{margin-top:20px;text-align:center;font-size:15.5px;color:var(--muted)}
+  .press-quote{margin-top:20px;text-align:center;font-size:15.5px;color:var(--muted);line-height:1.5}
   .press-quote em{font-style:normal;color:var(--green);font-weight:600}
 
-  section{padding:72px 0}
-  .sec-eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
-  h2{font-family:var(--display);font-size:clamp(29px,4vw,40px);line-height:1.12;color:var(--pine)}
-  .lede{margin-top:18px;font-size:18px;max-width:40em}
+  /* expect */
+  .expect-head{max-width:36em}
+  .expect-head p{margin-top:18px;font-size:18px;color:var(--ink)}
+  .myths{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}
+  .myth{border:1px dashed var(--line);border-radius:var(--r);padding:24px;background:var(--cream-2)}
+  .myth .ml{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .myth .mt{font-family:var(--display);font-size:20px;color:var(--pine);line-height:1.25}
+  .myth p{font-size:16px;color:var(--muted);margin-top:8px}
+  .truth{margin-top:30px;font-family:var(--display);font-size:clamp(21px,2.6vw,26px);line-height:1.3;color:var(--green);padding-left:24px;border-left:4px solid var(--orange)}
+  .reals{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;margin-top:36px;list-style:none;padding:0}
+  .reals li{padding:16px 0;border-bottom:1px dashed var(--line);font-size:16.5px;color:var(--muted)}
+  .reals li strong{font-family:var(--display);font-weight:400;font-size:18.5px;color:var(--green);display:block;margin-bottom:3px}
+  .expect-foot{margin-top:34px;font-size:18px;color:var(--ink);max-width:44em}
 
-  /* speaking */
-  .speaking{background:var(--pine);color:#EFE7D7}
-  .speaking h2{color:#fff}
-  .speaking .sec-eyebrow{color:#E6A074}
-  .speaking .lede{color:#C9C1B1}
-  .talks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
-  .talk{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:26px 24px}
-  .talk .tt{font-family:var(--display);font-size:22px;color:#fff;line-height:1.2}
-  .talk p{font-size:16px;color:#C9C1B1;margin-top:12px}
-  .speak-foot{margin-top:38px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14);display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-  .speak-foot p{color:#C9C1B1;font-size:16.5px;max-width:34em}
-  .btn-light{padding:14px 24px;border-radius:11px;background:var(--orange);color:#fff;font-weight:600;font-size:16px;display:inline-block;transition:background .18s}
-  .btn-light:hover{background:var(--orange-d);color:#fff}
+  /* program */
+  .program{background:var(--pine);color:#EFE7D7}
+  .program h2{color:#fff}
+  .program .sec-eyebrow{color:#E6A074}
+  .program .lead{margin-top:18px;color:#C9C1B1;max-width:36em;font-size:18px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+  .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:26px 24px}
+  .step .sn{font-family:var(--display);font-size:15px;color:#E6A074;letter-spacing:.08em;margin-bottom:12px}
+  .step .st{font-family:var(--display);font-size:25px;color:#fff;line-height:1.15}
+  .step .sd{font-size:16px;color:#C9C1B1;margin-top:12px}
+  .step ul{margin-top:14px;padding-left:0;list-style:none}
+  .step li{font-size:15px;color:#EFE7D7;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.10)}
+  .step li:last-child{border-bottom:0}
+  .prog-foot{margin-top:38px;font-size:17px;color:#C9C1B1;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;max-width:44em}
 
-  /* coaching */
-  .coach-head{max-width:38em}
-  .tiers{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
-  .tier{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;position:relative}
-  .tier.hi{border-color:var(--orange);border-width:1.5px}
-  .tier.hi:before{content:"MOST POPULAR";position:absolute;top:-11px;left:26px;background:var(--orange);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.12em;padding:4px 11px;border-radius:6px}
-  .tier .tname{font-family:var(--display);font-size:26px;color:var(--green)}
-  .tier .tprice{font-family:var(--display);font-size:40px;color:var(--pine);margin-top:12px;line-height:1}
-  .tier .tprice span{font-family:var(--body);font-size:15px;font-weight:500;color:var(--muted)}
-  .tier .tdesc{font-size:16.5px;color:var(--muted);margin-top:14px}
-  .tier ul{list-style:none;margin-top:20px;padding:0;flex:1}
-  .tier li{padding:11px 0;border-bottom:1px dashed var(--line);font-size:16px}
-  .tier li:last-child{border-bottom:0}
-  .tier li b{font-weight:600;color:var(--green)}
-  .tier .btn{margin-top:24px;text-align:center}
-  .coach-note{margin-top:30px;font-size:16.5px;color:var(--muted);max-width:44em;padding-left:22px;border-left:3px solid var(--line)}
+  /* connection */
+  .conn-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .conn p{margin-top:20px;font-size:18px;color:var(--ink)}
+  .conn .stand{margin-top:26px;font-family:var(--display);font-size:22px;color:var(--green);line-height:1.35}
+  .conn-list{list-style:none;padding:0;margin-top:8px}
+  .conn-list li{padding:16px 0;border-bottom:1px dashed var(--line);font-size:17px}
+  .conn-list li:last-child{border-bottom:0}
+  .conn-list strong{font-family:var(--display);font-weight:400;font-size:19px;color:var(--green);display:block;margin-bottom:3px}
 
-  /* story */
-  .story{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-  .story p{margin-top:18px;font-size:18px}
-  .story .stand{font-family:var(--display);font-size:clamp(21px,2.6vw,27px);line-height:1.3;color:var(--green);padding-left:24px;border-left:4px solid var(--orange)}
+  /* cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+  .card{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 24px 40px -32px rgba(20,53,39,.55);border-color:#D8C7AC}
+  .card .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+  .card h3{font-family:var(--display);font-size:25px;color:var(--green);margin-bottom:10px}
+  .card p{color:var(--muted);font-size:16.5px;flex:1}
+  .card .go{margin-top:18px;font-weight:600;font-size:15px;color:var(--green);display:inline-flex;align-items:center;gap:7px}
+  .card:hover .go .arrow{transform:translateX(4px)}
+  .card .go .arrow{transition:transform .2s}
 
-  /* trp */
-  .trp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
-  .tcard{background:var(--cream-2);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;transition:transform .2s,box-shadow .2s}
-  .tcard:hover{transform:translateY(-3px);box-shadow:0 22px 38px -30px rgba(20,53,39,.55)}
-  .tcard .kicker{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
-  .tcard h3{font-family:var(--display);font-size:23px;color:var(--green);margin-bottom:8px}
-  .tcard p{color:var(--muted);font-size:16px}
-  .tcard .go{margin-top:16px;font-weight:600;font-size:15px;color:var(--green);display:inline-flex;gap:7px}
+  /* who */
+  .who{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .who-head{max-width:34em}
+  .who-head p{margin-top:18px;font-size:18px;color:var(--ink)}
+  .whos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .whobox{background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
+  .whobox .wt{font-family:var(--display);font-size:22px;color:var(--green);margin-bottom:10px}
+  .whobox p{font-size:16.5px;color:var(--muted)}
 
-  /* cta */
+  /* closing cta */
   .cta-band{background:var(--green);color:#fff;text-align:center}
-  .cta-band h2{color:#fff;max-width:18em;margin:0 auto}
-  .cta-band p{margin-top:16px;color:#EAE2D2;max-width:30em;margin-left:auto;margin-right:auto}
-  .cta-band .btn{margin-top:28px}
+  .cta-band h2{color:#fff;max-width:17em;margin:0 auto}
+  .cta-band .ns{margin-top:18px;font-family:var(--display);font-size:20px;color:#EAE2D2;max-width:26em;margin-left:auto;margin-right:auto}
+  .cta-band .btn{margin-top:30px}
+  .cta-band .micro{margin-top:14px;font-size:14px;color:rgba(255,255,255,.7)}
 
-  footer{padding:44px 0 38px;border-top:1px solid var(--line)}
-  .foot-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
-  .foot-brand{font-family:var(--display);color:var(--green);font-size:19px}
-  .foot-brand small{display:block;font-family:var(--body);font-size:13px;color:var(--muted);margin-top:6px}
-  .foot-nav{display:flex;gap:22px;font-size:15px;color:var(--muted);flex-wrap:wrap}
+  /* footer */
+  footer{background:var(--cream);border-top:1px solid var(--line);padding:46px 0 40px}
+  .foot-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+  .foot-brand{font-family:var(--display);color:var(--green);font-size:20px}
+  .foot-brand small{display:block;font-family:var(--body);font-weight:400;font-size:13px;color:var(--muted);margin-top:6px}
+  .foot-nav{display:flex;gap:22px;font-size:15px;font-weight:500;color:var(--muted);flex-wrap:wrap}
   .foot-nav a:hover{color:var(--orange)}
-  .foot-legal{width:100%;margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .foot-legal{width:100%;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .foot-legal a{color:var(--green);font-weight:600}
 
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
 
   @media (max-width:920px){
-    .hero-grid,.story-grid{grid-template-columns:1fr;gap:38px}
-    .talks,.tiers,.trp-grid{grid-template-columns:1fr}
-    .portrait{max-width:380px;aspect-ratio:4/3}
+    .hero-grid,.reality-grid,.conn-grid{grid-template-columns:1fr;gap:40px}
+    .steps,.cards,.whos,.choices,.myths{grid-template-columns:1fr}
+    .reals{grid-template-columns:1fr 1fr;gap:0 28px}
+    .panel{max-width:460px}
   }
   @media (max-width:620px){
     body{font-size:17px}
     .wrap{padding:0 20px}
     .nav{display:none}
     .nav-toggle{display:block}
-    .hero{padding:50px 0 44px}
-    section{padding:54px 0}
+    .hero{padding:54px 0 50px}
+    section{padding:56px 0}
     .cta-row{flex-direction:column}
     .cta-row .btn,.cta-row .btn-ghost{width:100%;text-align:center}
+    .brand small{display:none}
+    .reals{grid-template-columns:1fr}
     .press-row{gap:12px 26px}
     .press-row a{font-size:20px}
     .press-row a.sm{font-size:15px}
-    .brand small{display:none}
   }
   @media (prefers-reduced-motion:reduce){
-    *{transition:none!important;scroll-behavior:auto!important}
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
     .reveal{opacity:1;transform:none}
   }
   :focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:4px}
@@ -167,12 +219,12 @@
 
 <header class="site-head">
   <div class="wrap head-inner">
-    <a class="brand" href="#top">Brett Trainor<small>The Time Rich Project</small></a>
+    <a class="brand" href="#top">The Time Rich Project<small>Formerly The Corporate Escapee</small></a>
     <nav class="nav" aria-label="Primary">
-      <a href="#speaking">Speaking</a>
-      <a href="#coaching">Coaching</a>
-      <a href="#story">About</a>
-      <a class="pill" href="mailto:BT@BrettTrainor.com">Get in touch</a>
+      <a href="#program">The Program</a>
+      <a href="#community">Community</a>
+      <a href="#podcast">Podcast</a>
+      <a class="pill" href="https://stan.store/thecorporateescapee/p/see-where-your-time-actually-goes" target="_blank" rel="noopener">Get the Starter Kit</a>
     </nav>
     <button class="nav-toggle" onclick="document.querySelector('.nav').style.display='flex';this.style.display='none'">Menu</button>
   </div>
@@ -183,18 +235,33 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow">Speaker · Coach · Founder, The Time Rich Project</p>
-        <h1>Corporate ends for all of us. <em>I help Gen X be ready.</em></h1>
-        <p class="sub">I spent 25 years in corporate before they made the decision for me. What I decided was that I was not going back. Now I help Gen Xers transition out of corporate and build the lives they want, and have earned.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">For Gen X, whether you are still in or already out</p>
+        <h1>Life after corporate, <em>on your terms</em>.</h1>
+        <p class="sub">The Time Rich Project is a program and community dedicated to helping Gen Xers transition out of corporate and build the lives they want, and have earned. It all runs on time. You take back your hours, then you decide where they go.</p>
+        <p class="northstar">Design it <span class="arrow">&rarr;</span> Fund it <span class="arrow">&rarr;</span> Live it</p>
         <div class="cta-row">
-          <a class="btn" href="#speaking">Book me to speak</a>
-          <a class="btn-ghost" href="#coaching">Work with me 1:1</a>
+          <a class="btn" href="https://trp-collective.circle.so/checkout/the-time-rich-project-collective" target="_blank" rel="noopener">Join the Collective</a>
+          <a class="btn-ghost" href="https://stan.store/thecorporateescapee/p/see-where-your-time-actually-goes" target="_blank" rel="noopener">Get the free Starter Kit</a>
         </div>
+        <p class="micro">Start free. Six worksheets to see where your time actually goes. No spam.</p>
       </div>
-      <div class="portrait">
-        <img src="brett.png" alt="Brett Trainor speaking">
-      </div>
+
+      <aside class="panel" aria-label="The three part program">
+        <div class="panel-row">
+          <span class="num">1</span>
+          <div><div class="t">Design Your Life</div><div class="d">Connection. Mind &amp; Body. Purpose. Fun. Decide what you actually want before you count what it costs.</div></div>
+        </div>
+        <div class="panel-row">
+          <span class="num">2</span>
+          <div><div class="t">Fund Your Life</div><div class="d">Ongoing income in the fewest hours. You need less than you think, and it does not have to be another job.</div></div>
+        </div>
+        <div class="panel-row">
+          <span class="num">3</span>
+          <div><div class="t">Live Your Life</div><div class="d">The routines and rhythm to actually live it, once nobody is handing you a calendar.</div></div>
+        </div>
+        <p class="panel-q">You do not do it alone. That is the whole point.</p>
+      </aside>
     </div>
   </section>
 
@@ -203,140 +270,193 @@
     <div class="wrap">
       <p class="press-label">As featured in</p>
       <div class="press-row">
-        <a href="https://fortune.com/2024/12/09/gen-x-warning-brett-trainor-senior-executives-ceo-playbook/" target="_blank" rel="noopener"><img src="logos/fortune.png" alt="Fortune" onerror="this.replaceWith(document.createTextNode('Fortune'))"></a>
-        <a href="https://www.forbes.com/sites/tomokoyokoi/2024/03/14/is-fractional-work-right-for-you/" target="_blank" rel="noopener"><img src="logos/forbes.png" alt="Forbes" onerror="this.replaceWith(document.createTextNode('Forbes'))"></a>
-        <a class="sm" href="https://hbr.org/2024/07/how-part-time-senior-leaders-can-help-your-business" target="_blank" rel="noopener"><img src="logos/hbr.png" alt="Harvard Business Review" onerror="this.replaceWith(document.createTextNode('Harvard Business Review'))"></a>
-        <a href="https://www.inc.com/nicole-ramirez/he-left-corporate-and-discovered-a-surprising-truth-having-4-clients-is-safer-than-having-1-boss/91376082" target="_blank" rel="noopener"><img src="logos/inc.png" alt="Inc." onerror="this.replaceWith(document.createTextNode('Inc.'))"></a>
-        <a class="sm" href="https://www.fastcompany.com/91142141/gen-x-overlooked-millennials-baby-boomers-shadow" target="_blank" rel="noopener"><img src="logos/fastcompany.png" alt="Fast Company" onerror="this.replaceWith(document.createTextNode('Fast Company'))"></a>
+        <a href="https://fortune.com/2024/12/09/gen-x-warning-brett-trainor-senior-executives-ceo-playbook/" target="_blank" rel="noopener">Fortune</a>
+        <a href="https://www.forbes.com/sites/tomokoyokoi/2024/03/14/is-fractional-work-right-for-you/" target="_blank" rel="noopener">Forbes</a>
+        <a class="sm" href="https://hbr.org/2024/07/how-part-time-senior-leaders-can-help-your-business" target="_blank" rel="noopener">Harvard Business Review</a>
+        <a href="https://www.inc.com/nicole-ramirez/he-left-corporate-and-discovered-a-surprising-truth-having-4-clients-is-safer-than-having-1-boss/91376082" target="_blank" rel="noopener">Inc.</a>
+        <a class="sm" href="https://www.fastcompany.com/91142141/gen-x-overlooked-millennials-baby-boomers-shadow" target="_blank" rel="noopener">Fast Company</a>
       </div>
       <p class="press-quote"><em>&ldquo;Top career coach warns Gen X&hellip;&rdquo;</em> &nbsp;Fortune</p>
     </div>
   </section>
 
-  <!-- SPEAKING -->
-  <section id="speaking" class="speaking">
+  <!-- THE REALITY -->
+  <section class="reality reveal">
     <div class="wrap">
-      <p class="sec-eyebrow">Speaking</p>
-      <h2>The transition nobody prepared us for.</h2>
-      <p class="lede">Gen X is the first generation to hit the end of a corporate career without a pension, with decades of life still ahead, and with no playbook for what comes next. I talk about what that actually means and what to do about it. Direct, practical, and built for people who have heard enough motivational speeches.</p>
-
-      <div class="talks">
-        <article class="talk reveal">
-          <div class="tt">Sunrise or Sunset</div>
-          <p>Corporate is ending for every Gen Xer. You can treat that as the wind-down you were told to expect, or as the beginning of the part you actually choose. Both are valid. Only one is a decision.</p>
-        </article>
-        <article class="talk reveal">
-          <div class="tt">Four Clients Are Safer Than One Boss</div>
-          <p>Why a salary is the most concentrated risk most people will ever take, what the new market for experienced talent actually looks like, and how to fund a life without handing your time back to a single employer.</p>
-        </article>
-        <article class="talk reveal">
-          <div class="tt">Unlearning Corporate</div>
-          <p>Thirty years inside a system teaches you rules that stop working the day you leave. Over-analysis, waiting for permission, staying in your lane. What has to go, and what replaces it.</p>
-        </article>
+      <div class="reality-grid">
+        <div>
+          <p class="sec-eyebrow">The reality</p>
+          <h2>Corporate ends for every one of us.</h2>
+          <p>Some will hang on longer than others, but it ends. That is not a scare tactic, it is arithmetic. Careers are ending earlier, pensions are gone, and we are living decades longer than the old model was built for.</p>
+          <p>If you are still in it, you may not see it coming. I did not. They made the decision for me. What I decided was that I was not going back.</p>
+        </div>
+        <blockquote class="pullquote">Nothing about this is easy. But if everything is hard, <span>choose the hard that benefits you.</span></blockquote>
       </div>
 
-      <div class="speak-foot">
-        <p>Available for keynotes, corporate and association events, workshops, and podcasts. Talks are adapted to the room, whether that is people still inside, people recently let go, or leaders trying to support both.</p>
-        <a class="btn-light" href="mailto:BT@BrettTrainor.com?subject=Speaking%20inquiry">Check availability</a>
+      <div class="choices">
+        <div class="choice">
+          <div class="ct">Hang on</div>
+          <p>Keep your head down, hope it lasts, and figure it out when the decision gets made for you. Most people pick this one by default, not on purpose.</p>
+        </div>
+        <div class="choice hi">
+          <div class="ct">Build</div>
+          <p>Start now, while you still have runway. Decide what you want, work out how to fund it, and meet the exit on your terms instead of theirs.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- COACHING -->
-  <section id="coaching">
+  <!-- WHAT TO EXPECT -->
+  <section class="expect">
     <div class="wrap">
-      <div class="coach-head">
-        <p class="sec-eyebrow">1:1 Coaching</p>
-        <h2>Work with me directly.</h2>
-        <p class="lede">This is not a course or a canned program. It is built around your situation, where you are right now, what you actually want, and what is in the way. We work the three moves together: design the life, fund it, and build the structure to live it.</p>
+      <div class="expect-head">
+        <p class="sec-eyebrow">What to expect</p>
+        <h2>The unknown is the scary part.</h2>
+        <p>Most people picture one of two things when they imagine life after corporate. Both are available if you choose them. Most people choose neither.</p>
       </div>
 
-      <div class="tiers">
-        <article class="tier reveal">
-          <div class="tname">Monthly</div>
-          <div class="tprice">$395<span> / month</span></div>
-          <p class="tdesc">One session a month. Plenty of room to work between calls.</p>
+      <div class="myths">
+        <div class="myth reveal">
+          <div class="ml">Myth one</div>
+          <div class="mt">It is corporate, but lighter.</div>
+          <p>Same kind of work, fewer meetings, better hours. A softer version of what you already know.</p>
+        </div>
+        <div class="myth reveal">
+          <div class="ml">Myth two</div>
+          <div class="mt">It is an all-in entrepreneurial grind.</div>
+          <p>Raising money, building a company, working 80 hours to escape working 50.</p>
+        </div>
+      </div>
+
+      <blockquote class="truth">What actually happens is stranger, and better, than either one. Nobody describes it accurately, which is exactly why it feels so scary.</blockquote>
+
+      <ul class="reals">
+        <li><strong>The calendar goes blank</strong>Nobody sets your priorities now. That is freedom, eventually. At first it is disorienting.</li>
+        <li><strong>Income gets lumpy</strong>No more Friday deposit. The total can be fine while the rhythm still messes with your head.</li>
+        <li><strong>You lose the scoreboard</strong>No reviews, no promotion cycle. You build your own measure of how you are doing.</li>
+        <li><strong>You lose the coworkers</strong>The one nobody warns you about. You did not just lose a job, you lost your daily social life.</li>
+        <li><strong>Days stop having shapes</strong>Sunday night dread disappears. So does the structure that made rest feel earned.</li>
+        <li><strong>Guilt shows up</strong>Resting on a Wednesday feels illegal for about a year. Busy has meant worth for three decades.</li>
+      </ul>
+
+      <p class="expect-foot">None of that means you made a mistake. That is the process, and almost everyone hits most of it. The good news is the first stretch is the hardest, you need less money than you think, and nobody is judging you. That feeling is corporate too.</p>
+    </div>
+  </section>
+
+  <!-- THE PROGRAM -->
+  <section id="program" class="program">
+    <div class="wrap">
+      <p class="sec-eyebrow">The program</p>
+      <h2>Design it. Fund it. Live it.</h2>
+      <p class="lead">Getting out is one step. What nobody prepares you for is everything after. Thirty years of someone else setting your priorities, and then the calendar is blank. There is a sequence to this, and it is not complicated.</p>
+      <div class="steps">
+        <article class="step reveal">
+          <div class="sn">ONE</div>
+          <div class="st">Design Your Life</div>
+          <div class="sd">Before you price it, decide what you actually want. Four areas worth your hours:</div>
           <ul>
-            <li><b>One 1-hour session</b> each month, on your situation</li>
-            <li><b>Unlimited email and messaging</b> between sessions</li>
-            <li><b>A full year</b> in The Time Rich Collective</li>
-            <li>Access to the full program and tools</li>
+            <li>Connection</li>
+            <li>Mind &amp; Body</li>
+            <li>Purpose</li>
+            <li>Fun</li>
           </ul>
-          <a class="btn" href="mailto:BT@BrettTrainor.com?subject=Coaching%20inquiry%20(Monthly)">Start a conversation</a>
         </article>
-
-        <article class="tier reveal">
-          <div class="tname">Twice Monthly</div>
-          <div class="tprice">$750<span> / month</span></div>
-          <p class="tdesc">Two sessions a month at a slightly better rate. More momentum if you want it.</p>
-          <ul>
-            <li><b>Two 1-hour sessions</b> each month</li>
-            <li><b>Unlimited email and messaging</b> between sessions</li>
-            <li><b>A full year</b> in The Time Rich Collective</li>
-            <li>Access to the full program and tools</li>
-            <li>Faster progress through design, funding, and structure</li>
-          </ul>
-          <a class="btn" href="mailto:BT@BrettTrainor.com?subject=Coaching%20inquiry%20(Twice%20Monthly)">Start a conversation</a>
+        <article class="step reveal">
+          <div class="sn">TWO</div>
+          <div class="st">Fund Your Life</div>
+          <div class="sd">Find out what your life actually costs, then fund it in the fewest hours possible. There are hundreds of ways to make money that are not another full-time job. The goal is not replacing your old salary. It is funding the life you just designed.</div>
+        </article>
+        <article class="step reveal">
+          <div class="sn">THREE</div>
+          <div class="st">Live Your Life</div>
+          <div class="sd">Owning all of your time is a blessing and a curse until you learn to manage it. This is the structure, the routines, and the rhythm that make the design real. Once you get it, you will never give your time away again.</div>
         </article>
       </div>
-
-      <p class="coach-note">I am opening up a few slots right now. Either option works, twice a month is simply more convenient if you want to move faster, at a slightly better rate. If it is not a fit, I will tell you and point you somewhere better. Start with a conversation, no pitch.</p>
+      <p class="prog-foot">Everyone is smart enough to figure this out on their own. I did. It just took me years, I did it alone, and it did not have to be that hard.</p>
     </div>
   </section>
 
-  <!-- STORY -->
-  <section id="story" class="story">
-    <div class="wrap story-grid">
+  <!-- CONNECTION -->
+  <section class="conn">
+    <div class="wrap conn-grid">
       <div>
-        <p class="sec-eyebrow">About</p>
-        <h2>I did this the hard way first.</h2>
-        <p>I spent more than 25 years in corporate go-to-market roles. Good jobs, work I mostly liked, paid well. On paper nothing was wrong. But something was off and I could not name it.</p>
-        <p>Then they made the decision for me. I got kicked out. What I decided was that I was not going back.</p>
-        <p>Getting out did not fix it. I thought the hard part would be replacing my income. It was not. I owned all of my time and had no idea what to do with it, and the loneliest stretch of my life came after the paycheck problem was already solved.</p>
-        <p>I figured it out slowly, alone, and made most of the mistakes available. Then I started a community, and that changed everything. Not because I finally had answers. Because I found people asking the same questions.</p>
+        <p class="sec-eyebrow">Why the community</p>
+        <h2>The hardest part is not the money. It is how alone it feels.</h2>
+        <p>You do not just lose a paycheck when corporate ends. You lose the coworkers, the routine, and the built-in answer to what do you do. Your friends still inside cannot relate. Your spouse is worried about the money. Nobody around you is going through the same thing at the same time.</p>
+        <p>I did it alone for years. Every mistake was one I had to make myself to learn from. Starting this community changed that, not because I finally had the answers, but because I found people asking the same questions.</p>
+        <p class="stand">The connection is the cake. The program is the icing.</p>
       </div>
       <div>
-        <blockquote class="stand">Everyone is smart enough to figure this out on their own. I did. It just took me years, I did it alone, and it did not have to be that hard.</blockquote>
-        <p style="margin-top:26px;color:var(--muted);font-size:16.5px">Today I host The Time Rich Project Podcast, write a weekly newsletter, and run The Time Rich Collective, a community of Gen Xers making this transition together. The mission is to help one million Gen Xers take back control of their time and build the lives they want, on their own terms.</p>
+        <ul class="conn-list">
+          <li><strong>Your circle of five</strong>A small group of Gen Xers on the same path, so you are never working through this by yourself.</li>
+          <li><strong>Monthly working sessions</strong>The Builders, for people growing something without letting it take their life back. Gen X Side Hustle, for funding the life you want in the fewest hours.</li>
+          <li><strong>Connection and collaboration</strong>Not a support group and not a lecture. People who work, ideate, and push each other forward.</li>
+          <li><strong>The program and the tools</strong>Design it, fund it, live it, with the worksheets and structure to actually run it.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- TRP -->
-  <section>
+  <!-- WHO -->
+  <section class="who">
     <div class="wrap">
-      <p class="sec-eyebrow">The Time Rich Project</p>
-      <h2>Where the work lives.</h2>
-      <p class="lede">A podcast, a newsletter, and a community, all built around the same idea. Take back your time, then decide where it goes.</p>
-      <div class="trp-grid">
-        <article class="tcard reveal">
+      <div class="who-head">
+        <p class="sec-eyebrow">Who this is for</p>
+        <h2>You paid your dues. You did everything right.</h2>
+        <p>It does not matter where you are standing right now. The work is the same, only the urgency changes.</p>
+      </div>
+      <div class="whos">
+        <article class="whobox reveal">
+          <div class="wt">Still in corporate</div>
+          <p>You have the biggest advantage there is: time and income to prepare. Starting now is not admitting anything. It is the smartest thing you can do.</p>
+        </article>
+        <article class="whobox reveal">
+          <div class="wt">Just got the news</div>
+          <p>Yes, sort out the income. That part is real. Just do not rebuild the same cage while you are scared. This is your chance to design something better.</p>
+        </article>
+        <article class="whobox reveal">
+          <div class="wt">Already out</div>
+          <p>You got out and it still is not quite right. Escaping was one step. Now it is about what you build with the time you finally control.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE PIECES -->
+  <section id="podcast">
+    <div class="wrap">
+      <p class="sec-eyebrow">Where to start</p>
+      <h2>Three ways in.</h2>
+      <div class="cards">
+        <article class="card reveal" id="community">
           <span class="kicker">Community</span>
           <h3>The Collective</h3>
-          <p>Your circle of five, monthly working sessions, and the full program. Gen Xers making the same transition, together.</p>
-          <a class="go" href="https://trp-collective.circle.so/checkout/the-time-rich-project-collective" target="_blank" rel="noopener">Join <span class="arrow">&rarr;</span></a>
+          <p>Life is too damn short to do this alone. Your circle of five, monthly working sessions, and the full program. Gen Xers making the same transition, together.</p>
+          <a class="go" href="https://trp-collective.circle.so/checkout/the-time-rich-project-collective" target="_blank" rel="noopener">Join the Collective <span class="arrow">&rarr;</span></a>
         </article>
-        <article class="tcard reveal">
+        <article class="card reveal">
           <span class="kicker">Podcast</span>
-          <h3>The Time Rich Project</h3>
-          <p>Real people living on the other side of corporate. I ask all of them if they would go back. Not one has said yes.</p>
-          <a class="go" href="https://open.spotify.com/show/5UQSv8iKydo8E2cevuIAB5" target="_blank" rel="noopener">Listen <span class="arrow">&rarr;</span></a>
+          <h3>The Time Rich Project Podcast</h3>
+          <p>Real people living on the other side of corporate. What it looks like and how they got there. I ask all of them if they would go back. Not one has said yes.</p>
+          <a class="go" href="https://open.spotify.com/show/5UQSv8iKydo8E2cevuIAB5" target="_blank" rel="noopener">Listen on Spotify <span class="arrow">&rarr;</span></a>
         </article>
-        <article class="tcard reveal">
+        <article class="card reveal">
           <span class="kicker">Newsletter</span>
           <h3>In your inbox</h3>
-          <p>What corporate taught you that you now have to unlearn, and what actually works on the other side.</p>
+          <p>What corporate taught you that you now have to unlearn, and what actually works on the other side. Short, useful, no fluff.</p>
           <a class="go" href="https://trpnewsletter.beehiiv.com/" target="_blank" rel="noopener">Subscribe <span class="arrow">&rarr;</span></a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-band">
+  <!-- CLOSING CTA -->
+  <section id="join" class="cta-band">
     <div class="wrap">
-      <h2>Let's talk.</h2>
-      <p>Speaking inquiry, coaching, or just a question about where you are in this. I read everything.</p>
-      <a class="btn" href="mailto:BT@BrettTrainor.com">BT@BrettTrainor.com</a>
+      <h2>The exit is coming either way.</h2>
+      <p class="ns">This is how you meet it on your terms, with people doing the same thing.</p>
+      <a class="btn" href="https://trp-collective.circle.so/checkout/the-time-rich-project-collective" target="_blank" rel="noopener">Join the Collective</a>
+      <p class="micro">Not ready? <a href="https://stan.store/thecorporateescapee/p/see-where-your-time-actually-goes" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">Start with the free Starter Kit</a>.</p>
     </div>
   </section>
 
@@ -345,24 +465,26 @@
 <footer>
   <div class="wrap">
     <div class="foot-inner">
-      <div class="foot-brand">Brett Trainor<small>Helping Gen X transition out of corporate.</small></div>
+      <div class="foot-brand">The Time Rich Project<small>Life after corporate, on your terms.</small></div>
       <nav class="foot-nav" aria-label="Footer">
-        <a href="#speaking">Speaking</a>
-        <a href="#coaching">Coaching</a>
-        <a href="#story">About</a>
+        <a href="#program">The Program</a>
+        <a href="#community">Community</a>
+        <a href="#podcast">Podcast</a>
         <a href="https://trpnewsletter.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
-        <a href="mailto:BT@BrettTrainor.com">Contact</a>
+        <a href="mailto:BT@BrettTrainor.com">Say hello</a>
       </nav>
     </div>
     <div class="foot-legal">
-      <span>&copy; 2026 Brett Trainor. Founder, The Time Rich Project.</span>
-      <a href="mailto:BT@BrettTrainor.com" style="color:var(--green);font-weight:600">BT@BrettTrainor.com</a>
+      <span>&copy; 2026 The Time Rich Project. Formerly The Corporate Escapee. It evolved.</span>
+      <a href="mailto:BT@BrettTrainor.com">BT@BrettTrainor.com</a>
     </div>
   </div>
 </footer>
 
 <script>
-  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 </script>
 </body>
